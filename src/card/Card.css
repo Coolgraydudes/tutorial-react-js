@@ -1,0 +1,27 @@
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: cadetblue;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2, .card p {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.card button {
+    border: none;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
