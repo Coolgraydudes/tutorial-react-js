@@ -24,7 +24,12 @@ const [list, setList] = useState([])
 
             <table>
                 <tbody>
-                    
+                    <th>
+                        <td>No</td>
+                    </th>
+                    <th>
+                        <td>Nama</td>
+                    </th>
                         {list.map((item,index) => (
                             <tr>
                                 <td>{index + 1}</td>
