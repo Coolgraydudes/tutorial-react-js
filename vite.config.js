@@ -6,7 +6,7 @@ import HelloWorld from './src/hello-world/HelloWorld'
 export default defineConfig({
   plugins: [react()],
   server: {
-    open: "/task.html"
+    open: "/list.html"
   },
   build: {
     rollupOptions: {
@@ -14,8 +14,8 @@ export default defineConfig({
         index: "index.html",
         Hello_world: "hello-world.html",
         Contact: "contact.html",
-        task : "task.html"
-
+        task : "task.html",
+        list : "list.html"
 
       }
     }
