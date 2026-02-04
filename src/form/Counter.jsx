@@ -7,10 +7,12 @@ export default function Counter() {
         <div>
             <button onClick={
                 () => {
-                    setCounter(counter + 1)
+                    setCounter(c => c + 1)
+                    setCounter(c => c + 1)
+                    setCounter(c => c + 1)
                     console.log(counter)
                 }
-            }>Increment
+            }>Increment + 3
             </button>
 
 

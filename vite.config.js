@@ -5,11 +5,17 @@ import HelloWorld from './src/hello-world/HelloWorld'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    open: "/task.html"
+  },
   build: {
     rollupOptions: {
       input: {
         index: "index.html",
-        Hello_world: "hello-world.html"
+        Hello_world: "hello-world.html",
+        Contact: "contact.html",
+        task : "task.html"
+
 
       }
     }
