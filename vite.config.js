@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import HelloWorld from './src/hello-world/HelloWorld'
+import Counter from './src/counter/Counter'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
-    open: "/list.html"
+    open: "/note.html"
   },
   build: {
     rollupOptions: {
@@ -15,8 +16,9 @@ export default defineConfig({
         Hello_world: "hello-world.html",
         Contact: "contact.html",
         task : "task.html",
-        list : "list.html"
-
+        list : "list.html",
+        counter : "counter.html",
+        note : "note.html"
       }
     }
   }
