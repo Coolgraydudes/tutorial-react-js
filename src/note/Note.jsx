@@ -5,7 +5,7 @@ export default function Note({note, onChange, onDelete}) {
     let component;
 
     function handleChangeText(e) {
-        const newNote = { ... note, text: e. target. value};
+        const newNote = { ... note, text: e.target.value};
         onChange (newNote);
     }
 

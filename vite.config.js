@@ -7,7 +7,7 @@ import Counter from './src/counter/Counter'
 export default defineConfig({
   plugins: [react()],
   server: {
-    open: "/note.html"
+    open: "/dataSiswa.html"
   },
   build: {
     rollupOptions: {
@@ -18,7 +18,8 @@ export default defineConfig({
         task : "task.html",
         list : "list.html",
         counter : "counter.html",
-        note : "note.html"
+        note : "note.html",
+        note_siswa : "dataSiswa.html"
       }
     }
   }
