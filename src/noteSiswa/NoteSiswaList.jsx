@@ -1,6 +1,10 @@
 import NoteSiswa from "./NoteSiswa";
+import { useContext } from "react";
+import { NoteSiswaContext } from "./NoteSiswaContext";
 
-export default function NoteSiswaList({ siswaList, onChange, onDelete}) {
+export default function NoteSiswaList({}) {
+    const siswaList = useContext(NoteSiswaContext)
+
     return (
         <table>
             <thead>
@@ -17,8 +21,6 @@ export default function NoteSiswaList({ siswaList, onChange, onDelete}) {
                     <NoteSiswa
                         key={itemSiswa.id}
                         siswa={itemSiswa}
-                        onChange={onChange}
-                        onDelete={onDelete}
                     />
                 ))}    
             </tbody>    

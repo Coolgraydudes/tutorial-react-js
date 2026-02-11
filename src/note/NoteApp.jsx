@@ -1,9 +1,8 @@
-import { useImmer } from "use-immer";
 import NoteForm from "./NoteForm";
 import NoteList from "./NoteList";
-import { act, useReducer } from "react";
 import { useImmerReducer } from "use-immer";
-import { isDraft } from "immer";
+import { NotesContext, NotesDispatchContext } from "./NoteContext";
+
 
 let id = 0;
 const initialNotes = [
@@ -33,61 +32,15 @@ function notesReducer(notes, action) {
 export default function NoteApp() {
     const [notes, dispatch] = useImmerReducer(notesReducer, initialNotes)
 
-    function handleAddNote(text) {
-        dispatch({
-            type: 'ADD_NOTE',
-            text: text
-        })
-    }
-
-    function handleChangeNote(note) {
-        dispatch({
-            type: 'CHANGE_NOTE',
-            id: note.id,
-            text: note.text,
-            done: note.done
-        })
-    }
-
-    function handleDeleteNote(note) {
-        dispatch({
-            type: 'DELETE_NOTE',
-            id: note.id
-        })
-    }
-    // function handleAddNote(text) {
-    //     setNotes(draft => {
-    //         draft.push({
-    //             id: id++,
-    //             text: text,
-    //             done: false,
-    //         })
-    //     })
-    // }
-
-    // function handleChangeNote(note) {
-    //     setNotes(draft => {
-    //         const index = draft.findIndex(item => 
-    //             item.id === note.id);
-    //         draft[index] = note
-    //     })
-    // }
-
-    // function handleDeleteNote (note) {
-    //     setNotes(draft => {
-    //     const index = draft. findIndex(item =>
-    //         item.id === note.id);
-    //     draft.splice(index, 1);
-    //     });
-    // }
-
     return (
         <div>
-            <h1>Note App</h1>
-            <NoteForm onAddNote={handleAddNote}/>
-            <NoteList notes={notes}
-                      onChange={handleChangeNote}
-                      onDelete={handleDeleteNote}/>
+            <NotesContext.Provider value={notes}>
+                <NotesDispatchContext.Provider value={dispatch}>
+                    <h1>Note app</h1>
+                    <NoteForm/>
+                    <NoteList/>
+                </NotesDispatchContext.Provider>
+            </NotesContext.Provider>
         </div>
     )
 }   

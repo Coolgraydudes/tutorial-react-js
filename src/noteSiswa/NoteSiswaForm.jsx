@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { NoteSiswaDispatchContext } from "./NoteSiswaContext";
 
-export default function NoteSiswaForm({onAddSiswa}) {
+export default function NoteSiswaForm() {
     const [nama, setNama] = useState('')
     const [umur, setUmur] = useState('')
     const [kelas, setKelas] = useState('')
+    const dispatch = useContext(NoteSiswaDispatchContext)
 
     function handleClick() {
         if (nama && umur && kelas) {
-            onAddSiswa(nama, umur, kelas);
+            dispatch({ type: 'ADD_DATA', nama, umur, kelas});
             setNama(''); setUmur(''); setKelas('')
         } else {
             alert("Harap isi semua data")

@@ -19,7 +19,8 @@ export default defineConfig({
         list : "list.html",
         counter : "counter.html",
         note : "note.html",
-        note_siswa : "dataSiswa.html"
+        note_siswa : "dataSiswa.html",
+        profile : "profile.html"
       }
     }
   }

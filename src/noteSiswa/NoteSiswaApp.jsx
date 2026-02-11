@@ -1,4 +1,5 @@
 import { useImmerReducer } from "use-immer";
+import { NoteSiswaContext, NoteSiswaDispatchContext } from "./NoteSiswaContext";
 import NoteSiswaForm from "./NoteSiswaForm";
 import NoteSiswaList from "./NoteSiswaList";
 import "./style.css"
@@ -32,33 +33,16 @@ function siswaReducer(draft, action) {
 export default function NoteSiswaApp() {
     const [siswaList, dispatch] = useImmerReducer(siswaReducer, initialSiswa)
 
-    function handleAddSiswa(nama, umur, kelas) {
-        dispatch({type: 'ADD_DATA', nama, umur, kelas})
-    }
-
-    function handleChangeSiswa(siswa) {
-        dispatch({
-            type: 'EDIT_DATA',
-            id: siswa.id,
-            nama: siswa.nama,
-            umur: siswa.umur,
-            kelas: siswa.kelas
-        })
-    }
-
-    function handleDeleteSiswa(siswa) {
-        dispatch({type: 'DELETE_DATA', id: siswa.id})
-    }
 
     return (
-        <div>
-            <h1>Data Siswa</h1>
-            <NoteSiswaForm onAddSiswa={handleAddSiswa}/>
-            <NoteSiswaList
-                siswaList={siswaList}
-                onChange={handleChangeSiswa}
-                onDelete={handleDeleteSiswa}
-            />
-        </div>
+        <NoteSiswaContext.Provider value={siswaList}>
+            <NoteSiswaDispatchContext.Provider value={dispatch}>
+                <div>
+                    <h1>Data Siswa</h1>
+                    <NoteSiswaForm/>
+                    <NoteSiswaList/>
+                </div>
+            </NoteSiswaDispatchContext.Provider>
+        </NoteSiswaContext.Provider>
     )
 }
