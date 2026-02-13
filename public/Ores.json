@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Coal Ore",
+    "y_level": "Y: 95 to 136",
+    "image": "https://minecraft.wiki/images/Coal_Ore_JE4_BE3.png"
+  },
+  {
+    "id": 2,
+    "name": "Iron Ore",
+    "y_level": "Y: 16 to 80",
+    "image": "https://minecraft.wiki/images/Iron_Ore_JE6_BE4.png"
+  },
+  {
+    "id": 3,
+    "name": "Copper Ore",
+    "y_level": "Y: 0 to 96",
+    "image": "https://minecraft.wiki/images/Copper_Ore_JE2_BE2.png"
+  },
+  {
+    "id": 4,
+    "name": "Lapis Lazuli Ore",
+    "y_level": "Y: -64 to 64",
+    "image": "https://minecraft.wiki/images/Lapis_Lazuli_Ore_JE4_BE4.png?73194"
+  },
+  {
+    "id": 5,
+    "name": "Gold Ore",
+    "y_level": "Y: -64 to 32",
+    "image": "https://minecraft.wiki/images/Gold_Ore_JE7_BE4.png?9817a"
+  },
+  {
+    "id": 6,
+    "name": "Diamond Ore",
+    "y_level": "Y: -64 to -16",
+    "image": "https://minecraft.wiki/images/Diamond_Ore_JE5_BE5.png?fa2f4"
+  },
+  {
+    "id": 7,
+    "name": "Emerald Ore",
+    "y_level": "Y: -16 to 320 (Mountains)",
+    "image": "https://minecraft.wiki/images/Emerald_Ore_JE4_BE3.png"
+  },
+  {
+    "id": 8,
+    "name": "Redstone Ore",
+    "y_level": "Y: -64 to 15",
+    "image": "https://minecraft.wiki/images/Redstone_Ore_JE4_BE3.png"
+  },
+  {
+    "id": 9,
+    "name": "Nether Quartz Ore",
+    "y_level": "Y: 10 to 117 (Nether)",
+    "image": "https://minecraft.wiki/images/Nether_Quartz_Ore_JE3_BE2.png?f3464"
+  },
+  {
+    "id": 10,
+    "name": "Ancient Debris",
+    "y_level": "Y: 8 to 22 (Nether)",
+    "image": "https://minecraft.wiki/images/Ancient_Debris_JE1_BE1.png"
+  }
+]
