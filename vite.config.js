@@ -7,7 +7,7 @@ import Counter from './src/counter/Counter'
 export default defineConfig({
   plugins: [react()],
   server: {
-    open: "/oreMinecraft.html" 
+    open: "/online.html" 
   },
   build: {
     rollupOptions: {
@@ -24,7 +24,8 @@ export default defineConfig({
         timer : "timer.html",
         guestbook: "guestBook.html",
         product: "product.html",
-        oreMIncraft : "oreMinecraft.html"        
+        oreMIncraft : "oreMinecraft.html",
+        online : "online.html"  
       }
     }
   }

@@ -10,16 +10,17 @@ export default function ProductList() {
     }
 
     useEffect(() => {
-        console.info("fetching data")
-        if (load) {
-            fetch("/products.json")
-                .then((response) => response.json())
-                    .then((data) => setProducts(data))
+        async function fetchProduct() {
+            const response = await fetch("/products.json")
+            const data = await response.json()
+            setProducts(data)
         }
 
-        return () => {
-        console. log("ProductList component unmounted");
-        }   
+        console.log("Load Product")
+        if (load) {
+            fetchProduct()
+        }
+
     },[load]);
 
 
